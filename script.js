@@ -6,3 +6,15 @@ function getComputerChoice() {
     let randomChoice = randomArray[randomNumber];
     return randomChoice;
 }
+
+function playRound(playerSelection, computerSelection) {
+    
+    let computerSelection = getComputerChoice;
+
+    if ((playerSelection === "rock" && computerSelection === "paper") || (playerSelection === "paper" && computerSelection === "scissors") || (playerSelection === "scissors" && computerSelection === "rock")) {
+        return alert("You Lose! " + computerSelection + " beats " + playerSelection);
+    } else {
+        return alert("You Win!" + playerSelection + " beats " + computerSelection);
+    }
+
+}
