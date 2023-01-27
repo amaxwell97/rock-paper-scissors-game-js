@@ -7,23 +7,35 @@ function getComputerChoice() {
     return computerSelection;
 }
 
+let win = 0;
+let lose = 0;
+let tie = 0;
+
 function playRound(playerSelection, computerSelection) {
     if ((playerSelection === "Rock" && computerSelection === "Paper") || (playerSelection === "Paper" && computerSelection === "Scissors") || (playerSelection === "Scissors" && computerSelection === "Rock")) {
-        return alert("You Lose! " + computerSelection + " beats " + playerSelection);
+        console.log("You lost that round!");
+        return lose++;
     } else if (playerSelection == computerSelection) {
-        return alert("It\'s a Tie! " + playerSelection + " ties " + computerSelection);
+        console.log("You tied that round!");
+        return tie++;
     } else {
-        return alert("You Win! " + playerSelection + " beats " + computerSelection);
+        console.log("You won that round!");
+        return win++;
     }
 }
 
 function game() {
     for (let i = 0; i < 5; i++) {
-
+        playRound(prompt("Rock, Paper, or Scissors?"), getComputerChoice());
     }
 
-    if (xx)
-    return 
+    if (win > lose) {
+        return alert("You win! The final score was " + win + "-" + lose);
+    } else if (lose > win) {
+        return alert("You lose! The final score was " + win + "-" + lose);
+    } else {
+        return alert("You tied! The final score was " + win + "-" + lose);
+    }
 }
 
-// playRound(prompt("Rock, Paper, or Scissors?"), getComputerChoice());
+game();
