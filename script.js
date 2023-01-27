@@ -25,7 +25,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    for (let i = 0; i < 5; i++) {
+    while (lose < 5 && win < 5) {
         playRound(prompt("Rock, Paper, or Scissors?"), getComputerChoice());
     }
 
@@ -37,5 +37,19 @@ function game() {
         return alert("You tied! The final score was " + win + "-" + lose);
     }
 }
+
+// function game() {
+//     for (let i = 0; i < 5; i++) {
+//         playRound(prompt("Rock, Paper, or Scissors?"), getComputerChoice());
+//     }
+
+//     if (win > lose) {
+//         return alert("You win! The final score was " + win + "-" + lose);
+//     } else if (lose > win) {
+//         return alert("You lose! The final score was " + win + "-" + lose);
+//     } else {
+//         return alert("You tied! The final score was " + win + "-" + lose);
+//     }
+// }
 
 game();
