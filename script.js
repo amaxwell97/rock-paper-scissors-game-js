@@ -42,7 +42,7 @@ function game() {
 //     for (let i = 0; i < 5; i++) {
 //         playRound(prompt("Rock, Paper, or Scissors?"), getComputerChoice());
 //     }
-
+    
 //     if (win > lose) {
 //         return alert("You win! The final score was " + win + "-" + lose);
 //     } else if (lose > win) {
